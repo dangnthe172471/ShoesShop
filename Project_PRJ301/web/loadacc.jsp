@@ -14,11 +14,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <style>
             img{
                 width: 200px;
@@ -30,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-info" style="height: 160px">
             <div class="container">
                 <div style="width: 25%"><!-- content logo-->
-                    <a href="home"><img src="img/logo.jpg" style="width: 180px;height:140px; border: 1px soild black; border-radius: 50%"></a>
+                    <a href="home"><img src="img/logo.jpg" style="width: 165PX;height: 145px; border: 1px solid black; border-radius: 50%"></a>
                 </div>      
                 <div class="collapse navbar-collapse justify-content-end col" id="navbarsExampleDefault">
                     <div class="row">
@@ -93,8 +88,7 @@
                                     <td style="text-align: center">${o.status==0?'Active':'Block'}</td> 
                                     <td style="text-align: center">${o.isAdmin == 0 ? "Tài khoản thường" : "Tài khoản Admin"}</td>   
                                     <td style="text-align: center">
-
-                                        <a href="#" class="btn btn-primary editbtn"> <i class="material-icons">&#xE254;</i></a>
+                                        <a href="loadeditacc?user=${o.user}"> <i class="material-icons">&#xE254;</i></a>
                                         <a href="#" onclick="doDelete('${o.id}', '${o.user}')" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                         <a href="#" onclick="doBlock('${o.id}')" class="delete" data-toggle="modal"><i class="fa fa-ban"></i></a>
                                         <a href="#" onclick="doActive('${o.id}')" style="color: green" data-toggle="modal"><i class="fa fa-check-square-o"></i></a>
@@ -184,32 +178,7 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="modal fade" id="editmodal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Modal Heading</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <input type="text" name="bname" id="update_name"> 
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <script src="js/manager.js" type="text/javascript"></script>
+        </div>   <script src="js/manager.js" type="text/javascript"></script>
         <script type="text/javascript">
                                             function doDelete(id, user) {
                                                 if (confirm("Bạn có chắc muốn xóa tài khoản " + user + "?\n\nThao tác này không thể hoàn tác.")) {
@@ -226,21 +195,6 @@
                                                     window.location = "active?id=" + id;
                                                 }
                                             }
-        </script>
-
-        <script>
-            $(document).ready(function () {
-                $('.editbtn').on('click', function () {
-                    $('#editmodal').modal('show');
-                    $tr = $(this).closest('tr');
-                    var data = $tr.children("td").map(function () {
-                        return $(this).text();
-                    }).get();
-                    
-                    console.log(data);
-                    $('#update_name').val(data[0]);
-                });
-            });
-        </script>
+        </script>       
     </body>
 </html>

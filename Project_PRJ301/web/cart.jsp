@@ -102,7 +102,7 @@
                                                     </th>
 
                                                     <td class="align-middle" style="text-align: center;"><strong><fmt:formatNumber pattern="##.#" value="${i.price}"/></strong></td>
-                                                    <td class="align-middle" style="text-align: center;">
+                                                    <td class="align-middle row" style="margin-top: 15%">
                                                         <a href="process?num=-1&id=${i.product.id}"><button class="btnSub">-</button></a> 
                                                         <form action="process" id="f">
                                                             <input value="${i.product.id}" type="hidden" name="id" />
@@ -129,10 +129,6 @@
                             <input type="hidden" name="totalP" value="${i.quantity*i.price}"/>
                         </c:forEach>
                         Tổng tiền: ${totalMoney}$ (${totalMoney*25000}VND)
-                        <form action="checkout" method="post">
-                            Vocher<input name="mgg" type="text"/>
-                            <input type="submit" value="Ap Ma"/>
-                        </form> 
                         <form action="tt" method="post">   
                             Chọn hình thức thanh toán:<br>
                             <input type="radio" checked="true" name="ttweb" value="1"/> tài khoản web<br>
@@ -151,8 +147,7 @@
             </c:if>
         <br><br>
         <input  />
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5063419425255!2d105.52271427488881!3d21.012416680632768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abc60e7d3f19%3A0x2be9d7d0b5abcbf4!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBGUFQgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1718352773596!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <jsp:include  page="footer.jsp" />
+        <jsp:include  page="footer.jsp" />
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

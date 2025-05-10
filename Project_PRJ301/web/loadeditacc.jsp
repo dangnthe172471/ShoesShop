@@ -111,4 +111,15 @@
             <jsp:include page="footer.jsp"/>
         </c:if>
     </body>
+    
+    <script>
+    $(document).ready(function () {
+        $('#avatarInput').on('change', function () {
+            if ($(this).val()) { 
+                $('input[name="avatarU"]').val('');
+            }
+        });
+    });
+</script>
+
 </html>

@@ -137,7 +137,7 @@
                                             <p style="text-align: center; color: red;font-size: 16px;font-weight: bold">Price: ${o.price} $</p>
                                         </div>
                                         <div class="col" style="width: 100%; padding-bottom: 15px;">
-                                            <a href="detail?pid=${o.id}" class="btn btn-success btn-block fa fa-shopping-cart btn-outline-success" style="text-align: center; margin: 0 30px;width: 60%;">&nbsp;&nbsp; Detail</a>
+                                            <a href="detail?pid=${o.id}" class="btn btn-light btn-block fa fa-shopping-cart btn-outline-success" style="text-align: center; margin: 0 30px;width: 60%;">&nbsp;&nbsp; Detail</a>
                                         </div>
                                     </div>
                                 </div>

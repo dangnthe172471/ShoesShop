@@ -74,13 +74,13 @@ public class AvatarServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {      
-        String customDirectory = "D:/A/Ky4/SE1804-PRJ/Project/Project_PRJ301/Project_PRJ301/web/images";
+            throws ServletException, IOException {
+        String customDirectory = getServletContext().getRealPath("/images");
         Part part = request.getPart("avatar");
         String filename = Paths.get(part.getSubmittedFileName()).getFileName().toString();
         Path imagePath = Paths.get(customDirectory, filename);
-        if (!Files.exists(Paths.get(customDirectory))) {
-            Files.createDirectories(Paths.get(customDirectory));
+        if (!Files.exists(imagePath.getParent())) {
+            Files.createDirectories(imagePath.getParent());
         }
         part.write(imagePath.toString());
         String user = request.getParameter("user");

@@ -81,6 +81,7 @@ public class RegisterServlet extends HttpServlet {
         String address = request.getParameter("address");
         if (!pass.equals(re_pass)) {
             request.setAttribute("error", "Mật khẩu không trùng khớp !!!");
+           
             request.getRequestDispatcher("register.jsp").forward(request, response);
         }
         if (pass.isEmpty() || user.isEmpty() || re_pass.isEmpty()) {
@@ -94,7 +95,7 @@ public class RegisterServlet extends HttpServlet {
                 request.setAttribute("error", "Đăng ký tài khoản thành công !!!");
                 request.getRequestDispatcher("register.jsp").forward(request, response);
             } else {
-                request.setAttribute("error", "Tài khoản đã tồn tại !!!");
+                request.setAttribute("error", "Tài khoản đã tồn tại vui lòng kiểm tra lại username or email!!!");
                 request.getRequestDispatcher("register.jsp").forward(request, response);
             }
         }
