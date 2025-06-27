@@ -5,8 +5,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Shoes Shop</title>
-        <!--<script src="ckeditor/ckeditor.js"></script>-->
-        <script src="//cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link href="css/style_detail.css" rel="stylesheet" type="text/css"/>    
@@ -179,10 +177,6 @@
             }
         </script>   
 
-        <script>
-            var editor = CKEDITOR.replace('content');
-            CKFinder.setupCKEditor(editor, 'ckfinder/');
-        </script>
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger
         intent="WELCOME"

@@ -103,10 +103,5 @@
             <h1 style="text-align: center;margin: 200px;color: red">Bạn cần đăng nhập tài khoản Admin để tiếp tục</h1>
             <jsp:include page="footer.jsp"/>
         </c:if>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
-        <script>
-            CKEDITOR.replace('pname');
-        </script>
     </body>
 </html>
