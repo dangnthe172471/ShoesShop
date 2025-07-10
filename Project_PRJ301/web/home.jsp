@@ -115,9 +115,8 @@
                                             </div>
                                             <div class="row" style="width: 100%;margin: -20px auto;">
                                                 <div class="col" style="width: 100%">
-                                                    <p style="text-align: center; color: black;font-size: 12px;margin-bottom: 0px;"><del>Price: ${o.price*1.5} $</del></p>
-                                                    <p style="text-align: center; color: red;font-size: 16px;font-weight: bold">Price: 1000000000 VND</p>
-                                                     <fmt:formatNumber value="1000000000" type="number" groupingUsed="true"/>
+                                                    <p style="text-align: center; color: black;font-size: 12px;margin-bottom: 0px;"><del>Price: ${o.price*2} $</del></p>
+                                                    <p style="text-align: center; color: red;font-size: 16px;font-weight: bold">Price: ${o.price} $</p>
                                                 </div>
                                                 <div class="col" style="width: 100%; padding-bottom: 15px;">
                                                     <a href="detail?pid=${o.id}" class="btn btn-success btn-block fa fa-shopping-cart btn-outline-success" style="text-align: center; margin: 0 30px;width: 60%;">&nbsp;&nbsp; Detail</a>
